@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Opinie</title>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../static/logo.png" alt="" class="logo" />
+        <h1>Opinie</h1>
+
+        <table class="tg">
+        <thread>
+            <tr>
+                <th class="tg-0lax">Nr</th>
+                <th class="tg-0lax">Klient</th>
+                <th class="tg-0lax">Salon</th>
+                <th class="tg-0lax">Ocena</th>
+                <th class="tg-0lax">Komentarz</th>
+            </tr>
+        </thread>
+        <tbody>
+            {% for query in queries %}
+            <tr>
+                <td class="tg-0lax"><center>{{ query[0] }}</center></td>
+                <td class="tg-0lax">{{ query[1] }}</td>
+                <td class="tg-0lax">{{ query[2] }}</td>
+                <td class="tg-0lax"><center>{{ query[3] }}</center></td>
+                <td class="tg-0lax">{{ query[4] }}</td>
+            </tr>        
+            {% endfor %}
+        </tbody>
+        </table>
+        <br>
+        <a href="..">Strona główna</a>
+    </div>
+</body>
+</html>

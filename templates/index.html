@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Oceń swój serwis</title>
+</head>
+<body>
+    <div class="container">
+        <img src="../static/logo.png" alt="Lexus" class="logo">
+        {% if message %}
+        <p class="message">{{ message | safe }}</p>
+        {% endif %}
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <h3>Nazwa Klienta</h3>
+                <input
+                    type="text"
+                    name="customer"
+                    placeholder="Nazwisko właściciela pojazdu"
+                />
+            </div>
+            <div class="form-group">
+                <h3>Diler</h3>
+                <select name="dealer">
+                    <option value="">Wybierz dilera</option>
+                    <option value="Opel Automobil">Opel Automobil Warszawa</option>
+                    <option value="Opel Car">Opel Car Chęciny</option>
+                    <option value="Auto Car">Auto-car Częstochowa</option>
+                    <option value="Auto Rex">Auto-Rex Car Rzeszów</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h3>Oceń swojego dealera</h3>
+                <input type="radio" name="rating" value="1" /> 1
+                <input type="radio" name="rating" value="2" /> 2
+                <input type="radio" name="rating" value="3" /> 3
+                <input type="radio" name="rating" value="4" /> 4
+                <input type="radio" name="rating" value="5" /> 5
+                <input type="radio" name="rating" value="6" /> 6
+                <input type="radio" name="rating" value="7" /> 7
+                <input type="radio" name="rating" value="8" /> 8
+                <input type="radio" name="rating" value="9" /> 9
+                <input type="radio" name="rating" value="10" checked/> 10
+            </div>
+            <div class="form-group">
+                <h3>Komentarz</h3>
+                <textarea
+                    name="comments"
+                    id=""
+                    cols="30"
+                    rows="10"
+                    placeholder="Powiedz nam co lubisz lub/oraz czego nie lubisz"
+                ></textarea>
+            </div>
+                <input type="submit" value="Zatwierdź" class="btn" />           
+        </form>
+            <a href="/opinions"><button>Opinie</button></a>
+            <br/>
+    </div>
+</body>
+</html>
