@@ -9,6 +9,7 @@ Technologies:
 - Flask
 - SQLAlchemy
 - PostgreSQL
+- Heroku
 
 You can evaluate the selected car service:
 - Nazwa Klienta       - Customer Name
